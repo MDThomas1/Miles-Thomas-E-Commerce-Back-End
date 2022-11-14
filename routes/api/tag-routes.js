@@ -49,7 +49,7 @@ router.put('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
-    if (!tagData) {
+    if (!tagData[0]) {
       res.status(404).json({ message: 'The tag that you are searching for could not be found.' });
       return;
     }
